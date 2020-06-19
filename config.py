@@ -1,5 +1,8 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Config():
-    API_KEY = os.environ.get('API_KEY')
-    API_SECRET = os.environ.get('API_SECRET')
+    API_KEY = os.getenv('API_KEY')
+    API_SECRET = os.getenv('API_SECRET')
